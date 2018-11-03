@@ -72,6 +72,8 @@ func main() {
 		Port: utilities.GetIntWithFallbackValueFrom("APP_PORT", 5432),
 	}
 	addr := fmt.Sprintf("%s:%s", appConfig.IP, appConfig.Port)
+	logOutput := fmt.Sprint("Listening on ", addr)
 
 	http.ListenAndServe(addr, GetQuotes(db))
+	log.Println(logOutput)
 }
