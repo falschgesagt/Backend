@@ -6,6 +6,9 @@
 *.dylib
 Backend
 
+# Docker Image exports
+*.tar
+
 # Test binary, build with `go test -c`
 *.test
 
