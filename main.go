@@ -12,12 +12,6 @@ import (
 	"github.com/falschgesagt/Backend/db"
 )
 
-// Output Output struct used for outputting right JSON object
-type Output struct {
-	Quotes  []string `json:"quotes"`
-	Authors []string `json:"authors"`
-}
-
 // GetQuotes Gets all Qutoes
 func GetQuotes(db *sql.DB) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
@@ -50,7 +44,7 @@ func GetQuotes(db *sql.DB) http.Handler {
 			authors = append(authors, author)
 		}
 
-		var output = Output{quotes, authors}
+		var output = types.Output{quotes, authors}
 		js, err := json.Marshal(output)
 
 		if err != nil {
