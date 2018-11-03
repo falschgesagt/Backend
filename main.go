@@ -5,9 +5,9 @@ import (
 	"log"
 	"net/http"
 
+	"github.com/falschgesagt/Backend/db"
 	"github.com/falschgesagt/Backend/types"
 	"github.com/falschgesagt/Backend/utilities"
-	"github.com/falschgesagt/Backend/db"
 )
 
 func main() {
