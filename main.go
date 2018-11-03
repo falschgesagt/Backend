@@ -27,7 +27,7 @@ func GetQuotes(db *sql.DB) http.Handler {
 		quotesQuery := utilities.QueryAndPanicOnError("SELECT * FROM quote ORDER BY RAND();", db)
 		defer quotesQuery.Close()
 
-		authorsQuery := utilities.QueryAndPanicOnError("SELECT * FROM author ORDER BY RAND() LIMIT 500;", db)
+		authorsQuery := utilities.QueryAndPanicOnError("SELECT * FROM author ORDER BY RAND();", db)
 		defer authorsQuery.Close()
 
 		for quotesQuery.Next() {
