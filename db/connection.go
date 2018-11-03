@@ -16,7 +16,7 @@ func init() {
 
 	config := types.DatabaseConfig{
 		Host:     utilities.GetStringWithFallbackValueFrom("DB_HOST", "localhost"),
-		Port:     utilities.GetIntWithFallbackValueFrom("DB_PORT", 5432),
+		Port:     utilities.GetIntWithFallbackValueFrom("DB_PORT", 3306),
 		User:     utilities.GetStringFrom("DB_USER"),
 		Password: utilities.GetStringFrom("DB_PASSWORD"),
 		DB:       utilities.GetStringFrom("DB_NAME"),
