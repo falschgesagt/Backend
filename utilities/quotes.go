@@ -14,10 +14,10 @@ func GetQuotes(db *sql.DB) http.Handler {
 		quotes := make([]string, 0)
 		authors := make([]string, 0)
 
-		quotesQuery := utilities.QueryAndPanicOnError("SELECT * FROM quote ORDER BY RAND();", db)
+		quotesQuery := QueryAndPanicOnError("SELECT * FROM quote ORDER BY RAND();", db)
 		defer quotesQuery.Close()
 
-		authorsQuery := utilities.QueryAndPanicOnError("SELECT * FROM author ORDER BY RAND();", db)
+		authorsQuery := QueryAndPanicOnError("SELECT * FROM author ORDER BY RAND();", db)
 		defer authorsQuery.Close()
 
 		for quotesQuery.Next() {
