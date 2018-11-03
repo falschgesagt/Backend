@@ -3,9 +3,10 @@ package utilities
 import (
 	"database/sql"
 	"encoding/json"
-	"github.com/falschgesagt/Backend/types"
 	"log"
 	"net/http"
+
+	"github.com/falschgesagt/Backend/types"
 )
 
 // GetQuotes Gets all Qutoes
