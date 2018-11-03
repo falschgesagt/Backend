@@ -21,6 +21,6 @@ func main() {
 	addr := fmt.Sprintf("%s:%d", appConfig.IP, appConfig.Port)
 	logOutput := fmt.Sprint("Listening on ", addr)
 
-	http.ListenAndServe(addr, utilities.GetQuotes(db))
 	log.Println(logOutput)
+	http.ListenAndServe(addr, utilities.GetQuotes(db))
 }
