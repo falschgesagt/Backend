@@ -16,7 +16,7 @@ func main() {
 
 	appConfig := types.Config{
 		IP: utilities.GetStringWithFallbackValueFrom("APP_IP", "localhost"),
-		Port: utilities.GetIntWithFallbackValueFrom("APP_PORT", 8080),
+		Port: 8080,
 	}
 	addr := fmt.Sprintf("%s:%d", appConfig.IP, appConfig.Port)
 	logOutput := fmt.Sprint("Listening on ", addr)
