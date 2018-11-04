@@ -17,4 +17,5 @@ RUN cd $SRC_DIR; go build -o backend; cp backend /app/
 # Remove source
 RUN rm -rf $SRC_DIR
 
+EXPOSE 8080
 ENTRYPOINT ["./backend"]
